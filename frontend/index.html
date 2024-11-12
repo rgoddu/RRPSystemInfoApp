@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Information</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(45deg, #ff2e5f, pink);
+            background-size: 400% 400%;
+            animation: gradientMove 10s ease infinite;
+        }
+
+        h1 {
+            color: black;
+            
+            text-shadow: 2px 2px 20px #ffffff;
+        }
+
+        .info {
+            color: black;
+            margin-bottom: 20px;
+        }
+
+        /* Define the keyframes for the gradient animation */
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 0%;
+            }
+
+            50% {
+                background-position: 100% 100%;
+            }
+
+            100% {
+                background-position: 0% 0%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>This site is hosted on</h1>
+    <div id="systemInfo">
+        <p>Loading...</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
