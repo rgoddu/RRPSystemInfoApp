@@ -18,8 +18,30 @@
 
         h1 {
             color: black;
-            
+
             text-shadow: 2px 2px 20px #ffffff;
+        }
+
+        button {
+            background-color: black;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 15px;
+            padding: 8px 10px;
+            border-radius: 6px;
+            border-color: white;
+            outline: none;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        button:hover{
+            background-color: rgb(39, 39, 39);
+            border-color: black;
+            transform: scale(1.3);
+            filter:brightness(1.5) drop-shadow(30px 20px 40px black)
+        }
+        button:focus{
+           filter:blur(2px) opacity(.1);
         }
 
         .info {
@@ -48,6 +70,9 @@
     <h1>This site is hosted on</h1>
     <div id="systemInfo">
         <p>Loading...</p>
+    </div>
+    <div class="button">
+        <strong><button onclick=openNewWindow()>Check out the Github</button></strong>
     </div>
 
     <script src="script.js"></script>

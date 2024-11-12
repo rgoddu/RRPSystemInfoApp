@@ -7,6 +7,11 @@ function formatBytes(bytes) {
     return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
 }
 
+function openNewWindow(){
+    const url = 'https://github.com/rgoddu/RRPSystemInfoApp'
+    window.open(url)
+}
+
 window.onload = async function() {
     try {
         const response = await fetch('/api/system-info'); // Make an API request to get system info
@@ -39,10 +44,7 @@ window.onload = async function() {
             </div>
             <div class="info">
                 <strong>Used Memory:</strong> ${formatBytes(data.memory.used)}
-            </div>
-            <div class="info">
-                <strong><a href=https://github.com/rgoddu/RRPSystemInfoApp>Check out the code<a></strong>
-            </div>
+            </div>            
         `;
     } catch (error) {
         console.error('Error fetching system info:', error);
